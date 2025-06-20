@@ -1,6 +1,5 @@
-import {sumar} from "./server";
+import server from "./server";
 
-const resultado = sumar(1, 2);
-
-console.log(resultado);
-
+server.get("/", (req,res) => {
+    res.send("Hello World")
+})

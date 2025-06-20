@@ -1,24 +1,10 @@
 import express from "express";
+import productRouter from "./router"
 const server = express();
 
+server.use(express.json())
 
-
-server.get("/",(req,res) => {
-    res.send("GET PETITION");
-});
-
-server.post("/",(req,res) => {
-    res.send("PETITION POST")
-});
-server.put("/",(req,res) => {
-    res.send("PETITION PUT")
-});
-server.delete("/",(req,res) => {
-    res.send("PETITION DELETE")
-});
-server.patch("/",(req,res) => {
-    res.send("PETITION PATCH")
-});
+server.use('/api/products',productRouter)
 
 
 export default server;

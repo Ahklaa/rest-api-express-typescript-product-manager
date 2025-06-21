@@ -12,7 +12,8 @@ async function connectionDB(){
         await db.authenticate()
         db.sync() //update database
         console.log("Conexion exitosa a la base de datos ");
-    }catch{
+    }catch(e){
+        console.log(e);
         console.log("Hubo un error de conexion en la base de datos");
         
     }

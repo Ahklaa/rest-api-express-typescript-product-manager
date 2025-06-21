@@ -4,6 +4,7 @@ import db from './config/db'
 import colors from 'colors'
 const server = express();
 
+//leer datos de formulario
 server.use(express.json())
 
 server.use('/api/products',productRouter)

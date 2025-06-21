@@ -1,5 +1,5 @@
 import {Router} from 'express'
-
+import { createProduct } from './handlers/product';
 const router = Router()
 
 
@@ -7,9 +7,8 @@ router.get("/",(req,res) => {
     res.json("GET PETITION");
 });
 
-router.post("/",(req,res) => {
-    res.json("PETITION POST")
-});
+router.post("/",createProduct)
+
 router.put("/",(req,res) => {
     res.json("PETITION PUT")
 });
